@@ -1,5 +1,8 @@
 
 
+
+
+
 const switchbtn = document.getElementById("switch");
 
 switchbtn.addEventListener("click", ()=>{
@@ -10,6 +13,10 @@ switchbtn.addEventListener("click", ()=>{
   }
 });
 
+
+$(window).on("load",()=>{
+  $(".loader-wrapper").fadeOut("slow");
+});
 
 $(document).ready(function(){
   $('#menu-icon').click(function(){
