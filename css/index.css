@@ -1,0 +1,323 @@
+html{
+  --bg : #fff;
+  --color: #000;
+}
+
+
+
+body[data-theme= "dark"]{
+  --bg : #000;
+  --color: #fff;
+}
+body{
+  background-color: var(--bg);
+  color: var(--color)
+}
+
+.switchbox{
+  margin-top: 20px;
+  margin-left: 100px;
+  width: 60px;
+  height:  25px;
+  background-color:  red;
+  position: relative;
+  border-radius: 50px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+a{
+  text-decoration: none;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+
+/* mobile navbar */
+
+.overlay{
+  width: 0%;
+  height: 100px;
+  background: #0F2B40;
+  overflow: hidden;
+  position:sticky;
+  top: 0;
+  left:0;
+  transition: all 0.3s ease;
+}
+
+.overlay.open{
+  width: 100%;
+  height: 300px;
+}
+
+.contents{
+  position: relative;
+  top: 25%;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.overlay a {
+  font-size: 20px;
+  padding-top: 10px;
+  color: #0F2B40;
+  opacity: 0;
+  text-decoration: none;
+  display: block;
+  transition:  color 0.3s ease ;
+}
+
+
+
+
+.overlay a.open{
+  color: white;
+  opacity: 1;
+}
+
+
+.overlay a.open:hover{
+  color: #1abc9c;
+}
+
+#menu-icon{
+  width: 40px;
+  height: 36px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  curser: pointer;
+}
+
+#menu-icon span{
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #0F2B40;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#menu-icon span:nth-child(1){
+  top: 0px;
+  transform-origin: left center;
+}
+
+#menu-icon span:nth-child(2){
+  top: 10px;
+  transform-origin: left center;
+}
+
+#menu-icon span:nth-child(1){
+  top: 20px;
+  transform-origin: left center;
+}
+
+#menu-icon.open span:nth-child(1){
+  transform: rotate(45deg);
+  top: 5px;
+  left: 14px;
+  background: white;
+}
+
+#menu-icon.open span:nth-child(2){
+  width: 0%;
+  opacity: 0;
+  background: white;
+}
+
+#menu-icon.open span:nth-child(3){
+  transform: rotate(-45deg);
+  top: 19px;
+  left: 8px;
+  background: white;
+}
+.image{
+  margin: auto;
+  width: 300px;
+}
+img{
+  width: 200px;
+  height: 300px;
+  border-radius: 100px;
+}
+
+
+
+
+.title::after{
+  content: "\2767";
+  font-size: 40px;
+   color: blue;
+}
+.title{
+  margin: 20px;
+}
+.title::first-line{
+
+  background: linear-gradient(to right, red,yellow,pink,orange);
+}
+
+
+.switchbox input{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  -webkit-appearance: none;
+}
+
+.box{
+  position: absolute;
+  top: 10%;
+  left: 3px;
+  border-radius: 30px;
+  width: 20px;
+  height: 80%;
+  background-color: #fff;
+  transition: all .4s;
+}
+
+.switchbox input:checked~ .box{
+  left: 60%;
+  background-color: #6d6d6d;
+}
+
+
+.rating{
+  font-size: 3rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.rating::before{
+  content: "\1f7ca\1f7ca\1f7ca\1f7ca\1f7ca";
+  color: #ebebf5;
+  position: relative;
+}
+
+.rating::after{
+  width: 155px;
+  position: absolute;
+  color: #000;
+  top: 0;
+   left: 0;
+   overflow: hidden;
+  content: "\1f7ca\1f7ca\1f7ca\1f7ca\1f7ca";
+}
+
+/* Browse file  */
+#file-input{
+  display: none;
+}
+
+.file label{
+  padding: 50px 70px;
+  border-radius: 10px;
+  border: 2px dashed;
+  margin-bottom: 20px;
+}
+
+
+/* bg change on scroll */
+
+.scroll{
+  margin: auto;
+  margin-bottom: 100px;
+  width: 80%;
+  height: 300px;
+    position: relative;
+  overflow-y: scroll;
+
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.scroll::-webkit-scrollbar{
+  display: none;
+}
+
+.bg-image{
+  height: 300px;
+  position: relative;
+  background:  no-repeat center center/cover;
+}
+
+.img1{background-image: url("https://scx2.b-cdn.net/gfx/news/hires/2019/2-nature.jpg");}
+.img2{background-image: url("http://thewowstyle.com/wp-content/uploads/2015/01/nature-images.jpg");}
+.img3{background-image: url("https://tse4.mm.bing.net/th?id=OIP.bircyBDvJOcKd3mkR6ramwHaEK&pid=Api&P=0&w=319&h=180");}
+.img4{background-image: url("https://tse3.mm.bing.net/th?id=OIP.sBGBB33ASDBsm-8WAhX61QHaEo&pid=Api&P=0&w=242&h=152");}
+
+.bg-text{
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  font-weight: bold;
+  font-size: 40px;
+  border: 12px solid #fff;
+  width: 300px;text-align: center;
+  padding:  20px; color: #e8ffc4;
+  border-radius: 20px;
+}
+
+
+
+/* insta bottom nav */
+
+.wrapper{
+   background: #000;
+   z-index: 100;
+   display: flex;
+   position: fixed;
+   margin-top: 20px;
+   bottom: 0;
+   border-width: 20px;
+
+   justify-content: space-around;
+   width: 100%;
+   height: 50px;
+   padding: 10px;
+   font-size: 20px;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+}
+
+i{
+  z-index: 300;
+  color: #ffffff;
+}
+
+.active{
+  color: red;
+  transition: .3s ease-in;
+}
+
+.wrapper span{
+  width: 15%;
+  position: absolute;
+  left: 4%;
+  height: 30px;
+  background-color: yellow;
+  border-radius: 5px;
+  transition: all  .5s ease;
+}
