@@ -245,6 +245,37 @@ img{
 }
 
 
+/* shadow */
+/* .shadow-filters{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 100px 50px;
+
+}
+.shadow0{
+  width: 200px;
+  height:200px;
+  border-radius: 30px;
+  box-shadow: 0 0 4rem   #ECF0F3;
+}
+.shadow1{
+  width: 200px;
+  height:200px;
+  border-radius: 30px;
+  box-shadow: 0 0 4rem   #e3e3e3;
+  filter: blur(5px);
+  opacity: 100%;
+  transform: translate(-18px, -18px);
+}
+
+.shadow2{
+  width: 200px;
+  height:200px;
+  border-radius: 30px;
+  filter:drop-shadow(0 , 0 , 0.8rem , #ECF0F3) ;
+} */
+
 .rating{
   font-size: 3rem;
   background-color: #fff;

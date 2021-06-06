@@ -1,0 +1,96 @@
+
+body{
+  background: #fff;
+}
+
+.contactus{
+  margin: 5rem auto;
+  width: 80%;
+  height: 100px;
+
+}
+
+.links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+.link{
+  position: relative;
+}
+
+i{
+  position: relative;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: #fafafa;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  box-shadow: 0 1rem 6rem #e3e3e3;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+span{
+  position: absolute;
+  border: 2px solid;
+  border-radius: 5px;
+  left: -20px;
+  top: -50px;
+  opacity: 0;
+  padding: 5px 8px;
+}
+
+span::before{
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  left: 50%;
+  bottom:-5px;
+  transform: translate(-50%) rotate(45deg);
+  border-width: 1px;
+}
+
+.links  .link:hover span{
+  opacity: 1;
+  visibility: visible;
+  animation: move 0.5s ease ;
+}
+
+@keyframes move {
+  0%{
+    transform: scale(0) translate(0);
+  }
+  100%{
+    transform: scale(1) translateY(-10px);
+  }
+}
+
+.facebook:hover i,
+.facebook:hover span,
+.facebook:hover span::before{
+  background-color: #3b5999;
+  color: #ffffff;
+}
+.instagram:hover i,
+.instagram:hover span,
+.instagram:hover span::before{
+  background-color: #e1306c;
+  color: #ffffff;
+}
+.linkedin:hover i,
+.linkedin:hover span,
+.linkedin:hover span::before{
+  background-color: #474f85;
+  color: #ffffff;
+}
+.github:hover i,
+.github:hover span,
+.github:hover span::before{
+  background-color: #000;
+  color: #ffffff;
+}
