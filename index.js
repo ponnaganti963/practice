@@ -1,6 +1,20 @@
 
 
+function clock(){
+  var Hours = document.getElementById("Hours");
+  var Minutes = document.getElementById("Minutes");
+  var Seconds = document.getElementById("Seconds");
 
+  var h = new Date().getHours();
+  var m = new Date().getMinutes();
+  var s = new Date().getSeconds();
+
+  Hours.innerHTML = h;
+  Minutes.innerHTML = m;
+  Seconds.innerHTML = s;
+
+}
+var interval = setInterval(clock,1000);
 
 
 const switchbtn = document.getElementById("switch");
@@ -17,6 +31,9 @@ switchbtn.addEventListener("click", ()=>{
 $(window).on("load",()=>{
   $(".loader-wrapper").fadeOut("slow");
 });
+
+
+
 
 $(document).ready(function(){
   $('#menu-icon').click(function(){
@@ -36,6 +53,8 @@ function active(e){
   if(selected != null){
     selected.classList.remove("active");
   }
+  const p = document.querySelector(".wrapper");
+  console.log(p.screenX);
   const w = window.innerWidth;
   console.log(window.innerWidth);
   console.log(window.screen.width);
