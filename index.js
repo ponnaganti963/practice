@@ -54,21 +54,27 @@ function active(e){
     selected.classList.remove("active");
   }
   const p = document.querySelector(".wrapper");
-  console.log(p.screenX);
   const w = window.innerWidth;
-  console.log(window.innerWidth);
-  console.log(window.screen.width);
-  console.log(e.screenX);
-  e.target.classList.add("active");
-  if(e.screenX >=w*9/100  && e.screenX <= w*9/100 + 30){
+
+  // console.log(window.innerWidth);
+  // console.log(window.screen.width);
+  // console.log(e.screenX);
+  var position = "";
+  if(e.toElement.classList.length > 2){
+
+    e.target.classList.add("active");
+     position = e.toElement.classList[2];
+    console.log(e.toElement.classList,e,e.value);
+  }
+  if(position == "house"){
       changespan.style.left = "4%";
-  }else if (e.screenX >= w*27.5/100 && e.screenX <= w*29/100+ 30) {
+  }else if (position == "search") {
     changespan.style.left = "23%";
-  }else if (e.screenX >= w*46.6/100 && e.screenX <= w*49/100 + 30) {
+  }else if (position == "circle") {
     changespan.style.left = "42.5%";
-  }else if (e.screenX >= w*65.6/100 && e.screenX <= w*69/100 + 30) {
+  }else if (position == "heart") {
     changespan.style.left = "61.5%";
-  }else if (e.screenX >= w*85.4/100 && e.screenX <= w*89/100 + 30) {
+  }else if (position =="person") {
     changespan.style.left = "81.5%";
   }
 
