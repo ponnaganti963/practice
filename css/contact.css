@@ -75,6 +75,11 @@ body{
   transition: all 0.3s;
 }
 
+.contactus a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .contactus span{
   position: absolute;
   border: 2px solid;
@@ -184,6 +189,7 @@ label{
 }
 
 label i{
+  left: 50px;
   position: absolute;
   font-size: 25px;
   color: #ffd300;
@@ -243,8 +249,8 @@ input:checked + label{
 }
 
 #person:checked ~ .bubble{
-  left: 87.4%;
+  left: 86.4%;
 }
 #person:checked ~ div div .active{
-  left: 86.5%;
+  left: 85.5%;
 }
