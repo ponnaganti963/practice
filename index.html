@@ -57,6 +57,36 @@
     </div>
   </nav>
 
+  <button type="button" name="button" id ='btn' onclick="clicked()">0</button>
+
+  <div id="btns" class="btncontainer" >
+
+         <button  type="button" id='btn1' class="btnclass">1</button>
+         <button  type="button" id='btn2' class="btnclass">2</button>
+         <button  type="button" id='btn3' class="btnclass">3</button>
+         <button  type="button" id='btn4' class="btnclass">4</button>
+         <button  type="button" id='btn5' class="btnclass" onclick="rotate()">5</button>
+         <button  type="button" id='btn6' class="btnclass">6</button>
+         <button  type="button" id='btn7' class="btnclass">7</button>
+         <button  type="button" id='btn8' class="btnclass">8</button>
+         <button  type="button" id='btn9' class="btnclass">9</button>
+  </div>
+
+
+  <div class="calculator">
+    <input type="text"  class="res" name="">
+    <div class="btnss">
+      <button type="button" name="button" id="btn0">0</button>
+      <button type="button" name="button" id="btn1">1</button>
+      <button type="button" name="button" id="btnClr">C</button>
+      <button type="button" name="button" id="btnEql">=</button>
+      <button type="button" name="button" id="btnSum">+</button>
+      <button type="button" name="button" id="btnSub">-</button>
+      <button type="button" name="button" id="btnMul">*</button>
+      <button type="button" name="button" id="btnDiv">/</button>
+    </div>
+  </div>
+
   <div id="clock" class="container0">
     <div class="mid">
       <p>HOURS</p>
@@ -121,6 +151,23 @@
     <i class="bi bi-person-fill person"></i>
     <span></span>
   </div>
+
+  <form name="submit-to-google-sheet">
+   <input name="email" type="email" placeholder="Email" required>
+   <button type="submit">Send</button>
+ </form>
+
+ <script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbwrqNiGjqTHrRbJng6lhZ8YStn1b_5oT7Gi2IpBcAjHgNXqqyfNZRxv_KXOimFdB4esQQ/exec'
+   const form = document.forms['submit-to-google-sheet']
+
+   form.addEventListener('submit', e => {
+     e.preventDefault()
+     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+       .then(response => console.log('Success!', response))
+       .catch(error => console.error('Error!', error.message))
+   })
+ </script>
 
 
 

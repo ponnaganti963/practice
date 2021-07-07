@@ -1,4 +1,83 @@
 
+function clicked(){
+  var l = document.querySelector('#btn');
+   l.innerHTML = (+l.innerHTML) + 1;
+}
+
+var l = '4';
+var a =  ['1','2','3','6','9','8','7','4'];
+var b =  ['1','2','3','6','9','8','7','4'];
+
+var rotate = ()=>{
+  for(let i= 7;i>0;i--){
+    a[i] = a[i-1];
+  }
+  a[0] = l;
+  l = a[7];
+
+  for(let j=0; j<8; j++){
+    document.querySelector('#btn'+ b[j]).innerHTML = a[j];
+
+  }
+}
+
+var opr = "";
+var screen = document.querySelector(".res");
+
+screen.value = "";
+
+var btnclick = document.querySelectorAll('.btnss button');
+console.log(btnclick);
+for(let v of btnclick){
+
+  v.addEventListener("click", (e)=>{
+    console.log(v.id,v.innerHTML);
+    if(v.id != "btnClr" && v.id != "btnEql"){
+      screen.value += v.innerHTML;
+
+      if(v.id != "btn0" && v.id != "btn1"){
+        opr = v.innerHTML;
+      }
+      console.log(screen.value);
+    }else if (v.id == "btnEql") {
+      var str = screen.value.split(opr);
+      var op1 = str[0];
+      var op2 = str[1];
+
+      screen.value = (~~eval(parseInt(op1,2)+opr +  parseInt(op2,2))).toString(2);
+      opr = "";
+    }else if (v.id == "btnClr") {
+      screen.value = "";
+      opr = "";
+    }
+
+
+  })
+}
+
+//
+// for(let v of btnclick){
+//   if(v.id != "btnClr" && v.id != "btnEql"){
+//     screen.innerHTML += v.innerHTML;
+//
+//     if(v.id != "btn0" && v.id != "btn1"){
+//       opr = v.innerHTML;
+//     }
+//   }else if (v.id == "btnEql") {
+//     var str = screen.innerHTML.split(opr);
+//     var op1 = str[0];
+//     var op2 = str[1];
+//
+//     screen.innerHTML = (~~eval(parseInt(op1,2)+opr +  parseInt(op2,2))).toString(2);
+//     opr = "";
+//   }else if (v.id == "btnClr") {
+//     screen.innerHTML = "";
+//     opr = "";
+//   }
+//
+//
+//
+// }
 
 function clock(){
   var Hours = document.getElementById("Hours");

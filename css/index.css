@@ -3,6 +3,66 @@ html{
   --color: #000;
 }
 
+#btn{
+  width: 96px;
+  height: 48px;
+  font-size: 24px;
+  justify-content: center;
+  align-items : center;
+}
+
+#btns{
+  /* display: grid; */
+  width: 75%;
+  /* grid-template-columns: auto auto auto; */
+}
+.btncontainer>.btnclass{
+  width: 30%;
+  height: 48px;
+}
+
+.calculator{
+  width: 33%;
+}
+
+.res{
+  background-color: lightgray;
+  border: solid;
+  height: 48px;
+  width: 100%;
+  font-size: 20px;
+}
+
+#btn0,  #btn1{
+
+  background-color: lightgreen;
+  color: brown;
+}
+
+#btnClr, #btnEql{
+  background-color: darkgreen;
+  color: white;
+}
+
+#btnSub , #btnSum , #btnMul , #btnDiv{
+  background-color: black;
+ color: red;
+}
+.btnss{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.btnss>button{
+  width: 25%;
+  height: 36px;
+  font-size: 18px;
+  margin: 0px;
+  float: left;
+}
+
+
 
 .loader-wrapper{
   width: 100%;
